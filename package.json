@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "deploy": "gh-pages -d out",
+    "deploy": "gh-pages -d out -u \"github-actions[bot] <github-actions[bot]@users.noreply.github.com>\" -r https://x:${GH_TOKEN}@github.com/camilocruzg/personal_website.git",
     "sync-publications": "node scripts/sync-publications.mjs",
     "convert-bibtex": "node scripts/bibtex-to-json.mjs",
     "make:post": "node scripts/make-post.mjs",
