@@ -1,0 +1,95 @@
+---
+title: 'Prototyping the Game: First Steps in Godot'
+description: 'Early Godot experimentation for Vector Shift, focusing on turn-based movement and modular design.'
+publishedAt: "2025-02-22"
+tags:
+  - game-dev
+  - vector-shift
+  - godot
+status: 'Work in progress'
+tools:
+  - Godot
+  - GDScript
+  - VS Code
+coverImage: '/images/projects/first-prototype.png'
+---
+
+I usually learn by doing, so I jumped into prototyping my game idea in a bit of a rush. It's been exiting to see ideas start to take shape while everything is still rough and experimental. But the process has had a fir dose of frustration, as I realise that I need a more technical understanding of the inner workings of video games . In this post, I'll walk through my early prototyping process for *Vector Shift: Precision, Speed, Legacy*, what I've learned so far, and where I'm headed next.
+
+## **Why Prototype?**
+
+Rather than jumping straight into polished mechanics or final art, I wanted to quickly test the **core gameplay**—specifically, how movement feels in a turn-based racing game. My goal was simple: *see if the movement system felt intuitive and fun before committing to a more refined implementation.*
+
+I took a **"quick and dirty"** approach, focusing on:
+
+- Getting **basic movement mechanics** working
+- Understanding how **Godot handles input and grid-based movement**
+- Figuring out if an **isometric grid layout** makes sense for the track
+
+This stage is all about *discovery*, not perfection. And I have discovered a few things along the way... More on that later.
+
+## **Choosing the Tools**
+
+### **Why Godot?**
+
+This helped me quickly test basic movement before implementing more complex mechanics.
+
+After considering different engines, I settled on **Godot** for a few key reasons:
+
+- **Open-source & lightweight** – No licensing fees, and it runs smoothly on my hardware.
+
+- **Good support for 2D games** – While my game has some 3D aspects (like isometric perspective), it's fundamentally a grid-based 2D experience.
+
+- **Great community** – Godot has an active and helpful community, making it easier to find support and resources.
+
+- **GDScript is similar to Python** – Since Python is the language I'm most familiar with, GDScript felt like a natural choice and helped me get started faster.
+
+### **Why Isometric Tiles?**
+
+Since *Vector Shift* is based on **grid-based vector movement**, I needed a track layout that conveys movement options clearly while still looking dynamic. I considered both **top-down** and **isometric** perspectives, but isometric seemed to offer a good balance:
+✅ **Clear grid-based layout** while still feeling immersive
+✅ **More visually interesting** than pure top-down
+✅ **Potential for depth** if I add environmental elements later.
+
+For now, I'm using simple placeholder tiles, but the isometric structure seems to be working well.
+
+## **Challenges & What I've Learned**
+
+### **1. Software Architecture – The Player Script is a Mess**
+
+Like many first prototypes, my initial code works… but it's **becoming unmanageable**. Right now, my player script handles **everything**:
+
+- Movement logic
+- Grid calculations
+- Input handling
+- Collision checks
+- Turn management
+
+The result? A **bloated, hard-to-read script** that will become a nightmare to maintain. Moving forward, I need to break this into **modular components**—probably using **separate scripts for movement, input, and turn management**.
+
+### **2. Game Loops & Modularity – A Key Concept**
+
+I'm realizing that **understanding the game loop** is critical to structuring the game properly. Right now, I'm handling turns and updates in a clunky way, and I need to:
+
+- **Refactor turn logic** to work more cleanly with Godot's engine loop
+- Explore **better modular structures**, like **state machines** or even **entity-component systems (ECS)** for flexibility
+
+These concepts will be crucial as I refine the game.
+
+## **What's Next?**
+
+The prototype is not finished yet. I'm aiming to add start and game over screens, at least one NPC opponent, and to test the selection of power-ups (more on this in my next post, which will be about game loops).
+
+My next steps involve:
+
+1. Refining the prototype to test additional mechanics, like obstacles and power-ups.
+2. **Refactoring movement & input handling** to make the code cleaner and more modular.
+3. **Deepening my understanding of game loops**—studying state machines and ECS to see if they fit my needs.
+
+I also need to start thinking about **visual style**, which could be a great topic for my next blog post. Should I go for a minimalist, neon-inspired look? Or something more detailed and semi-realistic? That's a challenge for another day!
+
+### **Final Thoughts**
+
+Prototyping has been an eye-opening experience. While it's tempting to rush into making things look polished, I've learned that **laying a solid gameplay foundation** is the real priority. The scrappy early version of *Vector Shift* is already teaching me a ton, and I can't wait to refine it further.
+
+If you've ever struggled with game prototyping or have insights into game loops and modular design, I'd love to hear your thoughts! Drop a comment below or reach out. 🚀

@@ -6,10 +6,21 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "export": "next export",
+    "deploy": "gh-pages -d out",
+    "sync-publications": "node scripts/sync-publications.mjs",
+    "convert-bibtex": "node scripts/bibtex-to-json.mjs",
+    "make:post": "node scripts/make-post.mjs",
+    "make:publish": "node scripts/make-publish.mjs",
+    "make:publish:dry": "node scripts/make-publish.mjs --dry-run"
   },
   "dependencies": {
+    "bibtex-parse-js": "^0.0.24",
+    "gh-pages": "^6.3.0",
+    "gray-matter": "^4.0.3",
     "next": "16.0.7",
+    "next-mdx-remote": "^5.0.0",
     "react": "19.2.0",
     "react-dom": "19.2.0"
   },
