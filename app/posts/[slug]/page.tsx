@@ -71,7 +71,7 @@ export default async function PostPage({
         </div>
       )}
       
-      <section className="space-y-4 text-base text-[color:var(--foreground)]">
+      <section className="prose">
         <MDXRemote source={post.body} components={mdxComponents} />
       </section>
     </article>

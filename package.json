@@ -5,9 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "node scripts/add-nojekyll.mjs",
     "start": "next start",
     "lint": "eslint",
-    "deploy": "gh-pages -d out -r https://x:${GH_TOKEN}@github.com/camilocruzg/personal_website.git",
+    "deploy": "gh-pages -d out -r https://x:${GH_TOKEN}@github.com/camilocruzg/camilocruzg.github.io.git --dotfiles",
     "sync-publications": "node scripts/sync-publications.mjs",
     "convert-bibtex": "node scripts/bibtex-to-json.mjs",
     "make:post": "node scripts/make-post.mjs",

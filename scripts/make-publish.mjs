@@ -10,7 +10,6 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const postsDir = path.join(__dirname, "../content/posts");
 const projectsDir = path.join(__dirname, "../content/projects");
 const rootDir = path.join(__dirname, "..");
-const repoBasePath = "/personal_website";
 
 // Parse command line arguments
 const isDryRun = process.argv.includes("--dry-run");
@@ -113,11 +112,6 @@ function buildSite() {
     execSync("npm run build", {
       cwd: rootDir,
       stdio: "inherit",
-      env: {
-        ...process.env,
-        NEXT_PUBLIC_BASE_PATH: repoBasePath,
-        GITHUB_PAGES: "true",
-      },
     });
     return true;
   } catch (error) {
