@@ -1,0 +1,13 @@
+Camilo Soto
+Researcher · Engineer · Writer
+
+Experience
+- Research engineer at Example Labs, building reproducible NLP tooling
+- Adjunct mentor for early-stage faculty collaborations
+
+Education
+- PhD in Computational Linguistics
+
+Skills
+- Rust, TypeScript, Next.js
+- Scientific reproducibility, ML ops, prompt engineering
