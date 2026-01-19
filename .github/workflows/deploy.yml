@@ -17,6 +17,6 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Build static site
-        run: npm run export
+        run: npm run build
       - name: Publish via gh-pages
         run: npm run deploy

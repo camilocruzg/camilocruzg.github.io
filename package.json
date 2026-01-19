@@ -7,7 +7,6 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "export": "next export",
     "deploy": "gh-pages -d out",
     "sync-publications": "node scripts/sync-publications.mjs",
     "convert-bibtex": "node scripts/bibtex-to-json.mjs",

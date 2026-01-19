@@ -117,18 +117,6 @@ function buildSite() {
   }
 }
 
-// Export the site
-function exportSite() {
-  try {
-    log("Exporting static site...", "blue");
-    execSync("npm run export", { cwd: rootDir, stdio: "inherit" });
-    return true;
-  } catch (error) {
-    log(`❌ Export failed: ${error.message}`, "red");
-    return false;
-  }
-}
-
 // Deploy the site
 function deploySite() {
   try {
@@ -186,16 +174,11 @@ async function main() {
     console.log("");
     log("Ready to publish. This will:", "blue");
     log("  1. Build the Next.js application");
-    log("  2. Export static files");
-    log("  3. Deploy to GitHub Pages");
-    log("  4. Commit and push changes\n");
+    log("  2. Deploy to GitHub Pages");
+    log("  3. Commit and push changes\n");
 
-    // Build, export, and deploy
+    // Build and deploy
     if (!buildSite()) {
-      process.exit(1);
-    }
-
-    if (!exportSite()) {
       process.exit(1);
     }
 
