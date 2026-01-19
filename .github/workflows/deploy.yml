@@ -21,6 +21,8 @@ jobs:
       - name: Configure git user for gh-pages
         run: |
           git config user.name "Camilo Cruz"
-          git config user.email "camilo@example.com"
+          git config user.email "camilocruzg@gmail.com"
       - name: Publish via gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm run deploy
